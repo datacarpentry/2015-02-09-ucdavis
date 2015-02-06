@@ -15,6 +15,14 @@ surveys <- read.csv(file="../../data/biology/surveys.csv")
 > * being able to extract particular values from a `data.frame`
 > * being able to add/remove columns and rows
 
+# Start-up challenge
+
+To refresh our memories from yesterday, let's all begin with an exercise:
+
+1.  Load the "survey" data into R as a `data.frame`
+3.  Print the first 20 values of the column named "species"
+4.  Print the last 20 values of the column names "sex"
+
 
 # Subsetting data
 
