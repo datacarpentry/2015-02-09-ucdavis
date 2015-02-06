@@ -72,15 +72,16 @@ right of a `#` is ignored by R.
 ## Assignment operator
 
 `<-` is the assignment operator. Assigns values on the right to objects on the
-left, it is like an arrow that points from the value to the object. Mostly
-similar to `=` but not always. Learn to use `<-` as it is good programming
-practice. Using `=` in place of `<-` can lead to issues down the line.
+left, it is like an arrow that points from the value to the object.
+
+Many people use `=`, which works almost the same way. Some programmers have
+strong opinions about which is better.  It's really a matter of preference.
+
+`=` should is also used to specify the values of arguments in functions for
+instance `read.csv(file="data/some_data.csv").`
 
 In RStudio, typing `Alt + -` (push `Alt`, the key next to your space bar at the
 same time as the `-` key) will write ` <- ` in a single keystroke.
-
-`=` should only be used to specify the values of arguments in functions for
-instance `read.csv(file="data/some_data.csv")`.
 
 ## Functions and their arguments
 
