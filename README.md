@@ -1,8 +1,8 @@
 
-2015-02-08-ucdavis
+2015-02-09-ucdavis
 ==================
 
-UC Davis Data Carpentry Workshop
+Lessons for UC Davis Data Carpentry Workshop
 
 
 
