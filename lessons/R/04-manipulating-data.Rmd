@@ -20,8 +20,8 @@ surveys <- read.csv(file="../../data/biology/surveys.csv")
 To refresh our memories from yesterday, let's all begin with an exercise:
 
 1.  Load the "survey" data into R as a `data.frame`
-3.  Print the first 20 values of the column named "species"
-4.  Print the last 20 values of the column names "sex"
+2.  Print the first 20 values of the column named "species"
+3.  Print the last 20 values of the column names "sex"
 
 
 # Subsetting data
@@ -61,7 +61,7 @@ surveys_DO <- subset(surveys, species == "DO")
 
 1. What does the following do?
 
-  ```{r, echo=FALSE, purl=TRUE}
+  ```{r, echo=TRUE, purl=TRUE}
   ## What does the following do? (Try to guess without executing it)
   ## surveys_DO$month[2] <- 8
   ```
