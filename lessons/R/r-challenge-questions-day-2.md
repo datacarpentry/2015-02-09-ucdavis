@@ -1,23 +1,46 @@
 R Challenge Questions, Day 2
 ========================================================
 
+A recap of yesterday
+====================
+
+| What                      | Why |
+|---------------------------|---------------------------------------------------|
+| Data table best practices | To make data usable by computers and other humans |
+| Data cleaning | Getting usable data faster |
+| R Data Structures | How does the computer interpret my data? |
+
+The plan for today
+==================
+
+| What                      | Why |
+|---------------------------|---------------------------------------------------|
+| Manipulating data | Getting things in the forms you need for statistics, plotting, etc. |
+| Analyses | Statistics and plotting, this is what goes into your papers, right? |
+| Automation in the file system | Do it 2X for 3X the effort, but 1000X for 3X the effort, too. |
+| Help and problem solving | Getting from here to your research. ***Winning*** your research |
+
+
 Start-up challenge
 ====================
 To refresh our memories from yesterday, let's all begin with an exercise:
 
-1.  Load the "survey" data into R as a `data.frame`
+1.  Load the "surveys.csv" data into R as a `data.frame` called `surveys`
 2.  Print the first 20 values of the column named "species"
-3.  Print the last 20 values of the column names "sex"
+3.  Find a file called "species.csv" that you downloaded yesterday and put it in your project's `/data` subfolder
+4.  Find how many different values are in the "taxa" column of species (hint, it's a *factor*)
+
 
 Challenge
 =========
 
-1. What does the following do?
+1. What does the following do? (Guess before you try it)
 
   
   ```r
   surveys_DO$month[2] <- 8
   ```
+
  
 2. Use the function `subset` twice to create a `data.frame` that contains all
 individuals of the species "DM" that were collected in 2002.
@@ -67,3 +90,12 @@ Challenge
 =========
 
 1. Create a new plot showing the standard deviation for each species.
+
+
+Rubber Duck Debugging
+=====================
+
+author_book <- data.frame(
+	author_first=c("Charles", "Ernst", "Theodosius"),
+  author_last=c(Darwin, Mayr, Dobzhansky),
+  year=c(1942, 1970))

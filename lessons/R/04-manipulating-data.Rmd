@@ -20,9 +20,13 @@ surveys <- read.csv(file="../../data/biology/surveys.csv")
 To refresh our memories from yesterday, let's all begin with an exercise:
 
 1.  Load the "survey" data into R as a `data.frame`
-2.  Print the first 20 values of the column named "species"
-3.  Print the last 20 values of the column names "sex"
+2.  Show the first rows of the the data frame.
+3.  Print the last 20 values of the column named "sex"
 
+```{r, echo=FALSE, eval=FALSE}
+surveys = read.csv('data/biology/surveys.csv')
+head(surveys)
+```
 
 # Subsetting data
 
