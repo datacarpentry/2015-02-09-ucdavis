@@ -1,0 +1,108 @@
+R Challenge Questions, Day 2
+========================================================
+
+A recap of yesterday
+====================
+
+| What                      | Why |
+|---------------------------|---------------------------------------------------|
+| Data table best practices | To make data usable by computers and other humans |
+| Data cleaning | Getting usable data faster |
+| R Data Structures | How does the computer interpret my data? |
+
+The plan for today
+==================
+
+| What                      | Why |
+|---------------------------|---------------------------------------------------|
+| Manipulating data | Getting things in the forms you need for statistics, plotting, etc. |
+| Analyses | Statistics and plotting, this is what goes into your papers, right? |
+| Automation in the file system | Do it 2X for 3X the effort, but 1000X for 3X the effort, too. |
+| Help and problem solving | Getting from here to your research. ***Winning*** your research |
+
+
+Start-up challenge
+====================
+To refresh our memories from yesterday, let's all begin with an exercise:
+
+1.  Load the "surveys.csv" data into R as a `data.frame` called `surveys`
+2.  Print the first 20 values of the column named "species"
+3.  Find a file called "species.csv" that you downloaded yesterday and put it in your project's `/data` subfolder
+4.  Find how many different values are in the "taxa" column of species (hint, it's a *factor*)
+
+
+Challenge
+=========
+
+1. What does the following do? (Guess before you try it)
+
+  
+  ```r
+  surveys_DO$month[2] <- 8
+  ```
+
+ 
+2. Use the function `subset` twice to create a `data.frame` that contains all
+individuals of the species "DM" that were collected in 2002.
+  * How many individuals of the species "DM" were collected in 2002?
+  
+Challenge
+=========
+
+Use the same approach we used to add genera to add a column of species names in the `surveys` data
+frame.
+
+Challenge
+=========
+
+Construct a new `data.frame` that only includes data
+for the years 2000 and 2001.
+
+Challenge
+=========
+
+1. To determine the number of elements found in a vector, we can use
+use the function `length()` (e.g., `length(surveys$wgt)`). Using `length()`, how
+many animals have not had their weights recorded?
+
+2. What is the median weight for the males?
+
+3. What is the range (minimum and maximum) weight?
+
+4. Bonus question: what is the standard error for the weight? (hints: there is
+   no built-in function to compute standard errors, and the function for the
+   square root is `sqrt()`).
+   
+Challenge
+=========
+
+1. For species "DO", calculate the total observed in each year
+   
+Challenge
+=========
+
+1. Create a new barplot showing the standard deviation for each species.
+2. Pick a species. Create a line plot showing the how average population of that species changes month-to-month over the year (averaging across all years and plots)
+    -   (Use `plot`, and add the argument `type = "l"` for a line plot.)
+3. Mess around with the colors
+4. Look at ?par to learn more plotting options.
+
+
+Rubber Duck Debugging (1)
+=========================
+
+```
+author_book <- data.frame(
+	author_first=c("Charles", "Ernst", "Theodosius"),
+  author_last=c(Darwin, Mayr, Dobzhansky),
+  year=c(1942, 1970))
+```
+
+Rubber Duck Debugging (2)
+=========================
+
+```
+surveys_m = subset(surveys, sex = "M")
+median(surveys_m$wgt, na.rm=TRUE)
+median(na.omit(surveys_m$wgt))
+```
